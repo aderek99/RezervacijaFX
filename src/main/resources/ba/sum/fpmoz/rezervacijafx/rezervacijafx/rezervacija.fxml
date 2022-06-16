@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="431.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.sum.fpmoz.rezervacijafx.rezervacijafx.controller.RezervacijaController">
+   <children>
+      <GridPane layoutX="406.0" prefHeight="325.0" prefWidth="307.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="82.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="225.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Ime" />
+            <Label text="Prezime" GridPane.rowIndex="1" />
+            <Label text="JMBG" GridPane.rowIndex="2" />
+            <Label text="E-mail" GridPane.rowIndex="3" />
+            <TextField fx:id="nameTxt" GridPane.columnIndex="1" />
+            <TextField fx:id="usernameTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="uidTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="emailTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button layoutX="579.0" layoutY="354.0" mnemonicParsing="false" onAction="#savePutnik" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #6495ED;" text="Rezerviraj!">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary" />
+         </styleClass>
+      </Button>
+      <TableView fx:id="tableViewPutnik" layoutX="7.0" layoutY="59.0" onMouseClicked="#selectPutnik" prefHeight="279.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Ime" />
+            <TableColumn fx:id="tableColumnUsername" prefWidth="75.0" text="Prezime" />
+            <TableColumn fx:id="tableColumnUid" prefWidth="75.0" text="JMBG" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="75.0" text="E-mail" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteBtn" disable="true" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" onAction="#deletePutnik" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: red;" text="Pobriši!" textFill="#fffbfb">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-danger" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
